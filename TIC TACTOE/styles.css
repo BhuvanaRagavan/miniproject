@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    background-image: linear-gradient(45deg, #ff6b6b, #f5f5f5);
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    width: 95%;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px #ff6b6b;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #fefefe;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 10px;
+    height: 100px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #ffc107;
+    transform: scale(1.1);
+}
+
+.restart-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.restart-button:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.05);
+}
+
+.message {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #555;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.winner-message {
+    font-size: 2em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.congrats {
+    background-color: #ffeb3b;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+        font-size: 2.5em;
+        height: 80px;
+    }
+
+    .restart-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
