@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./assets/bg1.jpg') no-repeat center center/cover;
+  color: #39ff14;
+}
+
+h1 {
+  text-align: center;
+  color: #39ff14;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa;
+}
+
+/* Container for the to-do list */
+.todo-container {
+  background: rgba(26, 26, 26, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-container input,
+.input-container select {
+  padding: 10px;
+  border: 1px solid #39ff14;
+  background: #0d0d0d;
+  color: #39ff14;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.input-container button {
+  padding: 10px;
+  background-color: #39ff14;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.input-container button:hover {
+  background-color: #2ecc71;
+}
+
+/* Styles for the to-do list items */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #39ff14;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background: #0d0d0d;
+  color: #39ff14;
+}
+
+ul li .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+ul li .timestamp {
+  font-size: 0.8rem;
+  color: #9cffb8;
+  margin-top: 5px;
+}
+
+ul li .delete {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul li .delete:hover {
+  background: #c9302c;
+}
